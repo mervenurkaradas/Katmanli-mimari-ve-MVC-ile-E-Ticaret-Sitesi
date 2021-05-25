@@ -1,0 +1,52 @@
+﻿@model ProductWM
+@{
+    ViewData["Title"] = "CreateProduct";
+}
+<div class="container">
+    <h2>Ürün Ekle/Oluştur</h2>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-controller="Admin" asp-action="CreateProduct" method="post">
+                <div class="form-group row">
+                    <label asp-for="Name" class="col-md-2 col-form-label">Ürün Adı</label>
+                    <div class="col-md-10">
+                        <input asp-for="Name" value="@Model.Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Image" class="col-md-2 col-form-label">Ürün Resmi</label>
+                    <div class="col-md-10">
+                        <input asp-for="Image" value="@Model.Image" class="form-control" />
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Description" class="col-md-2 col-form-label">Ürün Açıklaması</label>
+                    <div class="col-md-10">
+                        <textarea id="editor" asp-for="Description" class="form-control">
+                        value="@Model.Description"
+                        </textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Price" class="col-md-2 col-form-label">Fiyat Bilgisi</label>
+                    <div class="col-md-10">
+                        <input asp-for="Price" value="@Model.Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-10 offset-md-2">
+                        <button type="submit" class="send">Ürünü Kaydet</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

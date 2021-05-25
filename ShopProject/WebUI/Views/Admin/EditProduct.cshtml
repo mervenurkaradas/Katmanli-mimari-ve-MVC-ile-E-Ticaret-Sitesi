@@ -1,0 +1,61 @@
+﻿@model ProductWM
+@{
+    ViewData["Title"] = "EditProduct";
+}
+<div class="container">
+    <h2>Ürün Düzenle</h2>
+</div>
+<hr />
+<form asp-controller="Admin" asp-action="EditProduct" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <input type="hidden" name="Id" value="@Model.Id" />
+                <div class="form-group row">
+                    <label asp-for="Name" class="col-md-2 col-form-label">Ürün Adı</label>
+                    <div class="col-md-10">
+                        <input asp-for="Name" value="@Model.Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Image" class="col-md-2 col-form-label">Ürün Resmi</label>
+                    <div class="col-md-10">
+                        <input asp-for="Image" value="@Model.Image" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Description" class="col-md-2 col-form-label">Ürün Açıklaması</label>
+                    <div class="col-md-10">
+                        <textarea id="editor" asp-for="Description" class="form-control">
+                            @Model.Description 
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Price" class="col-md-2 col-form-label">Fiyat Bilgisi</label>
+                    <div class="col-md-10">
+                        <input asp-for="Price" value=" @Model.Price" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-10 offset-md-2">
+                        <button type="submit" class="send">Ürünü Kaydet</button>
+                    </div>
+                </div>
+
+            </div>
+
+            @*<div class="col-md-4">
+                @foreach (var item in (List<Category>)ViewBag.Categories)
+                {
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="category@(item.Id)" @(Model.SelectedCategories.Any(i=>i.Id==item.Id)?"checked":"")/>
+                        <label class="custom-control-label" for="category@(item.Id)">@item.Name</label>
+                    </div>
+                }
+            </div>*@
+
+        </div>
+    </div>
+</form>

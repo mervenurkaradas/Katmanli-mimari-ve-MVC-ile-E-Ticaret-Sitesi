@@ -1,0 +1,28 @@
+﻿@*@model LoginWM
+@{
+    ViewData["Title"] = "ForgotPasswd";
+}
+<div class="container">
+    <h2>Şifremi Unuttum</h2>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-controller="Account" asp-action="ForgotPasswd" method="post">
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label">E-mail</label>
+                    <div class="col-md-10">
+                        <input type="text" name="Email" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-10 offset-md-2">
+                        <button type="submit" class="btn btn-primary btn-dark">Gönder</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>*@
+

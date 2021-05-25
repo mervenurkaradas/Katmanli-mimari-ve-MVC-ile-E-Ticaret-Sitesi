@@ -1,0 +1,70 @@
+﻿@model OrderWM
+@{ ViewData["Title"] = "Checkout"; }
+<div class="continer">
+    
+    <div class="col-md-9 mb-4">
+        
+            <h1>Sipariş Bilgileri</h1>
+            <hr />
+            <h4 class="mb-3">Sipariş Detayları</h4>
+            <form action="/checkout" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="@Model.FirstName">Adınız</label>
+                        <input asp-for="@Model.FirstName" value="" class="form-control" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="@Model.LastName">Soyadınız</label>
+                        <input asp-for="@Model.LastName" value="" class="form-control" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="@Model.Address">Adres</label>
+                    <textarea asp-for="@Model.Address" class="form-control"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label asp-for="@Model.City">Şehir</label>
+                        <input asp-for="@Model.City" value="" class="form-control" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label asp-for="@Model.Phone">Telefon</label>
+                        <input asp-for="@Model.Phone" value="" class="form-control" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label asp-for="@Model.Email">Email</label>
+                        <input asp-for="@Model.Email" value="" class="form-control" />
+                    </div>
+                </div>
+                <hr class="mb-4" />
+            </form>
+        </div>
+        <div class="col-md-4 mb-4">
+
+            <h4>
+                <span class="text-muted">Sepet Toplamınız</span>
+            </h4>
+            <ul class="list-group mb-3">
+                @foreach (var item in Model.CartWM.CartItems)
+                {
+
+    <li class="list-group-item d-flex justify-content-between">
+        <div>
+            <span class="text-muted">
+                @item.Name
+                <span> X @item.Quantity</span>
+            </span>
+        </div>
+        <span class="text-muted">@item.Price TL</span>
+    </li>            }
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Toplam Tutar</span>
+                    <strong>@Model.CartWM.TotalPrice() TL</strong>
+                </li>
+            </ul>
+
+            <button type="submit" class="send">Sipariş ver</button>
+        </div>
+    </div>
+ 
+

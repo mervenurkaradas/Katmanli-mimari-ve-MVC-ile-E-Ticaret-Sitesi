@@ -1,0 +1,29 @@
+﻿@model ProductListWM
+<div class="brand_color">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>ÜRÜNLERİMİZ</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="product-bg">
+        <div class="product-bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            @foreach (var product in Model.Products)
+                            {
+                <partial name="_product" for="@product"/>}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

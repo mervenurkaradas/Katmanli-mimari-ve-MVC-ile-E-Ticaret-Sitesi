@@ -1,0 +1,142 @@
+﻿<div class="header">
+    <div class="head_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="top-box">
+                        <ul class="sociel_link">
+                            <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                            <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="top-box">
+                        <p>Online Alışverişin Adresi </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col logo_section">
+                <div class="full">
+                    <div class="center-desk">
+                        <div class="logo"><a asp-controller="Home" asp-action="Index"><img src="~/images/logo.jpg" alt="logo" /></a> </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-sm-12">
+                    <div class="menu-area">
+                        <div class="limit-box">
+                            <nav class="main-menu">
+
+                                <ul class="menu-area-main">
+                                    <li class="nav-item">
+                                        <a asp-controller="Shop" asp-action="List">Ürünler</a>
+                                    </li>
+                                </ul>
+
+                            </nav>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                        <nav class="main-menu">
+                            <div class="dib">
+                                <ul class="menu-area-main">
+                                    <li class="nav-item">
+                                        <a asp-controller="Cart" asp-action="Index">Sepet</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dib">
+                                <ul class="menu-area-main">
+                                    <li class="nav-item">
+                                        <a asp-controller="Cart" asp-action="Order">Siparişler</a>
+                                    </li>
+                                </ul>
+                            </div>
+                                </nav>
+                                }
+                                @if (User.IsInRole("admin"))
+                            {
+                                <nav class="main-menu">
+                                    <div class="dib">
+                                        <ul>
+                                            <li class="nav-item">
+                                                <a asp-controller="Admin" asp-action="CreateProduct">Ürün Ekle</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+
+                                 <nav class="main-menu">
+                                     <div class="dib">
+                                         <ul>
+                                             <li class="nav-item">
+                                                 <a asp-controller="Admin" asp-action="ProductLists">Admin Ürün</a>
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </nav>
+
+                                 <nav class="main-menu">
+                                     <div class="dib">
+                                         <ul>
+                                             <li class="nav-item">
+                                                 <a asp-controller="Admin" asp-action="CreateCategory">Kategori Ekle</a>
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </nav>
+
+                                 <nav class="main-menu">
+                                     <div class="dib">
+                                         <ul>
+                                             <li class="nav-item">
+                                                 <a asp-controller="Admin" asp-action="CategoryLists"> Admin Kategori</a>
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </nav>
+                            
+                            }
+                        
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                            <ul>
+                                <li><a class="buy-account" asp-controller="Account" asp-action="Logout">Çıkış Yap</a></li>
+                            </ul>
+
+                            <ul>
+                                <li><a class="buy-account" asp-controller="Account" asp-action="Manage"> @User.Identity.Name</a></li>
+                            </ul>
+                     }
+
+                    else
+
+                    {
+                       
+                            <ul>
+                                <li>
+                                    <a class="buy-account" asp-controller="Account" asp-action="Login">Oturum Aç</a>
+                                </li>
+                            </ul>
+                            
+                            <ul>
+                                <li>
+                                    <a class="buy-account" asp-controller="Account" asp-action="Register">Kayıt Ol</a>
+                                </li>
+                            </ul>
+                       
+                    }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

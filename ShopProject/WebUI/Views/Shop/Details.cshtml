@@ -1,0 +1,60 @@
+﻿@model ProductWM
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="product-bg">
+    <div class="product-bg-white">
+        <div class="row">
+            <div class="container">
+                <p align="right">
+                    <div class="col-md-12">
+                        <img src="~/images/@Model.Product.Image" alt="@Model.Product.Name" class="img-fluid" />
+                        <div class="container">
+                            <div class="col-md-offset-10">
+                                <div class="container">
+                                    <h1 class="mb-6">
+                                        @Model.Product.Name
+                                    </h1>
+                                    <hr />
+                                    @foreach (var category in Model.Categories)
+                                    {
+                                        <a href="#" class="btn btn-link-dark p-0 mb-3">@category.Name</a>
+                                    }
+                                <div class="mb-3">
+                                    <h4 class="text-primary-dark mb-3">
+                                        @Model.Product.Price TL
+                                    </h4>
+
+                                    <form asp-controller="Cart" asp-action="AddToCart" method="post" class="form-inline">
+
+                                        <input type="hidden" name="productId" value="@Model.Id" />
+                                        <div class="input-group mb-3">
+                                            <input type="number" name="number" class="form-control" value="1" min="1" step="1" style=" width:80px;" />
+                                            <div class="input-group-append">
+                                                <button type="submit" class="send-account" width="80px">Sepete Ekle</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                                   
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-xl-5">
+                        @Model.Product.Description
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

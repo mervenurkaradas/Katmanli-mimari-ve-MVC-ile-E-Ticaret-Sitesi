@@ -1,0 +1,14 @@
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\Business.deps.json
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\Business.dll
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\Business.pdb
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\DataAccess.dll
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\Entities.dll
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\DataAccess.pdb
+C:\Users\mnkar\source\repos\ShopProject\Business\bin\Release\netcoreapp3.1\Entities.pdb
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.dll
+C:\Users\mnkar\source\repos\ShopProject\Business\obj\Release\netcoreapp3.1\Business.pdb

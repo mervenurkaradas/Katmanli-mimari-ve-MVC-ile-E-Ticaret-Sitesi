@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "bootstrap": "4.6.0",
+    "jquery": "3.6.0"
+  }
+}

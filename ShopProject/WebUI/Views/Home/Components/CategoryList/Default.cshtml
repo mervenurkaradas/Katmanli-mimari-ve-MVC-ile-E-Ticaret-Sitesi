@@ -1,0 +1,12 @@
+﻿@model CategoryListWM
+
+
+<div class="list-group">
+    @foreach (var item in Model.Categories)
+    {
+        <a asp-controller="Shop" asp-action="List" asp-route-Category="@item.Name.ToLower()" 
+           class="list-group-item list-group-item-action">
+            @item.Name
+        </a>
+    }
+</div>

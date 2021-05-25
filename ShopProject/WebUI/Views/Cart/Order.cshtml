@@ -1,0 +1,31 @@
+﻿@model OrderWM
+@{
+    ViewData["Title"] = "Order";
+}
+<div class="container">
+    <h4>
+        <span class="text-muted">Siparişleriniz</span>
+    </h4>
+    <ul class="list-group mb-3">
+        @foreach (var item in Model.CartWM.CartItems)
+        {
+
+            <li class="list-group-item d-flex justify-content-between">
+                <div>
+                    <span class="text-muted">
+                        @item.Name
+                        <span> X @item.Quantity</span>
+                    </span>
+                </div>
+                <span class="text-muted">@item.Price TL</span>
+            </li>
+        }
+        <li class="list-group-item d-flex justify-content-between">
+            <span>Toplam Tutar</span>
+            <strong>@Model.CartWM.TotalPrice() TL</strong>
+        </li>
+    </ul>
+
+    <button type="submit" class="send">Sipariş ver</button>
+</div>
+

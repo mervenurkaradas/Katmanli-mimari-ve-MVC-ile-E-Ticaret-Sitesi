@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewData["Title"] = "Index2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<partial name="_slider" />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">@await Component.InvokeAsync("CategoryList")</div>
+        <div class="col-sm-9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            @foreach (var product in Model.Products)
+                            {
+                                <partial name="_product" for="@product" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--Service-->
+<div class="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="title">
+                    <h2>Hizmet <strong class="black">Süreci</strong></h2>
+                    <span>Sipariş , İade ve Değişim İşlemlerinde Kolaylık...</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="service-box">
+                    <i><img src="~/icon/service1.png" /></i>
+                    <h3>Hızlı Paketleme</h3>
+                    <p>Sipariş verildiği andan itibaren 7 gün içinde gönderim...</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="service-box">
+                    <i><img src="~/icon/service2.png" /></i>
+                    <h3>Güvenli Ödeme</h3>
+                    <p>internet'ten yapılan ödemeler artık çok güvenli... </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="service-box">
+                    <i><img src="~/icon/service3.png" /></i>
+                    <h3>Alanında Uzman Kişiler</h3>
+                    <p>Uzman kişilerle en doğru sonuçlara ulaşım... </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="service-box">
+                    <i><img src="~/icon/service4.png" /></i>
+                    <h3>Uygun Fiyatlar</h3>
+                    <p>Hem uygun hem ucuz fiyatlar... </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="service-box">
+                    <i><img src="~/icon/service5.png" /></i>
+                    <h3>90 Güne Kadar İade</h3>
+                    <p>İade süresini uzattık artık dert yok </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="service-box">
+                    <i><img src="~/icon/service6.png" /></i>
+                    <h3>Ödüllü Ürünler</h3>
+                    <p>Ürünlerimizle kalitenin keyfini çıkarın... </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Service Son-->
+<!--yorum-->
+<div class="Clients_bg_white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h3>Müşterilerimiz Neler Diyor?</h3>
+                </div>
+            </div>
+        </div>
+        <div id="client_slider" class="carousel slide banner_Client" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#client_slider" data-slide-to="0" class="active"></li>
+                <li data-target="#client_slider" data-slide-to="1"></li>
+                <li data-target="#client_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption text-bg">
+                            <div class="img_bg">
+                                <i><img src="~/images/lllll.png" /><span>Jone Due<br><strong class="date">12/02/2021</strong></span></i>
+
+                            </div>
+
+                            <p>
+                                Siteden sipariş ettiğim ürünlerden çok memnun kaldım. Siteyi arkadaşlarıma da tanıttım, beraber başka siparişler de verdik. Ve hiçbirinde en ufak memnuniyetsizliğimiz olmadı.<br>
+                                Bugün aylık sipariş raporu yollamışsınız ona da bayıldım, harika bir fikir. Sabırsızlıkla yeni ürün alımlarınızı bekliyoruz, Sevgiler
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption text-bg">
+                            <div class="img_bg">
+                                <i><img src="~/images/lllll.png" /><span>Selena Gomez<br><strong class="date">23/01/2021</strong></span></i>
+
+                            </div>
+                            <p>
+                                Sevdiğim bir markayı gayet uygun fiyata aldım. Ürün kısa sürede tarafıma kargolandı ve tertemiz geldi. Çok teşekkür eder hayırlı çalışmalar dilerim<br>
+                                Kullanılabilir ürünlere güvenli bir uygulamayla ve işleyişle ulaşabilmek çok güzel
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption text-bg">
+                            <div class="img_bg">
+                                <i><img src="~/images/lllll.png" /><span>Taylor Swift<br><strong class="date">05/04/2021</strong></span></i>
+
+                            </div>
+                            <p>
+                                Gerçekten harika bir site kurmuşsunuz. Sürdürülebilirlik için uzun süredir ikinci el ürün satın almak için site site geziyordum. Fakat güvenilir bir yer bulmakta çok zorlanıyordum.<br>
+                                Sizin sitenize gerçekten hayran kaldım. Çok düzenli, güvenilir, uygun fiyatlı bir satış yapıyorsunuz. Umarım bir an önce yeni ürün alımına başlarsınız ve seçeneklerimiz artar. Her şey için teşekkürler
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--yorum son-->
+    </div>
+</div>
